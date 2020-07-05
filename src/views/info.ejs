@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%- include('../partials/head.ejs') %>
+  <title>Info</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark cyan scrolling-navbar"
+      style="justify-content: center; min-height: 180px;">
+      <a class="navbar-brand" href="/"><strong>Câmara dos Deputados</strong></a>
+    </nav>
+  </header>
+  <div class="container">
+    <div class="jumbotron" style=" margin-top: 200px;">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <h1><%= deputado.nome %></h1>
+        <img src="<%= deputado.urlFoto %> " alt="<%= deputado.nome %>">
+      </div>
+    </div>
+    <div class="jumbotron">
+      <ul class="list-group">
+        <li class="list-group-item"><strong>Estado:</strong> <%= deputado.siglaUf %> </li>
+        <li class="list-group-item"><strong>Partido:</strong> <%= deputado.siglaPartido %> </li>
+        <li class="list-group-item"><strong>Email:</strong> <%= deputado.email %> </li>
+        <li class="list-group-item"><strong>Situação:</strong> <%= deputado.situacao %> </li>
+      </ul>
+    </div>
+  </div>
+
+
+  <%- include('../partials/scripts.ejs') %>
+</body>
+
+</html>
